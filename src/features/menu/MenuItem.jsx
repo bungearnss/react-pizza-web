@@ -1,18 +1,20 @@
+import { formatCurrency } from "../../utils/helpers";
+
 function MenuItem({ pizza }) {
-    const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
-  
-    return (
-      <li>
-        <img src={imageUrl} alt={name} />
+  const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
+
+  return (
+    <li>
+      <img src={imageUrl} alt={name} />
+      <div key={id}>
+        <p>{name}</p>
+        <p>{ingredients.join(", ")}</p>
         <div>
-          <p>{name}</p>
-          <p>{ingredients.join(', ')}</p>
-          <div>
-            {!soldOut ? <p>{formatCurrency(unitPrice)}</p> : <p>Sold out</p>}
-          </div>
+          {!soldOut ? <p>{formatCurrency(unitPrice)}</p> : <p>Sold out</p>}
         </div>
-      </li>
-    );
-  }
-  
-  export default MenuItem;
+      </div>
+    </li>
+  );
+}
+
+export default MenuItem;
