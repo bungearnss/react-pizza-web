@@ -15,6 +15,9 @@ Currently, two official plugins are available:
 - Reponsive UI
 - Use ReactRouter and tailwindcss
 
+## Preview
+
+![pizza_app](https://github.com/user-attachments/assets/b2f30439-c093-4031-b957-f8956f4e0609)
 
 ## Installation
 
